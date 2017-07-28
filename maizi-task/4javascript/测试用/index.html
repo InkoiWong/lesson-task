@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+
+<script type="text/javascript">
+	function a(){
+		var co = document.querySelector(".container");
+		var sa = document.getElementById("in");
+		var qw = document.getElementById("qw");
+		document.onkeydown=function(event){
+			var e=event||window.event;
+			if(e&&e.keyCode==13){
+				
+				var vev=sa.value.split(" ");
+				for (var i=0;i<vev.length;i++){
+					;(function(n){
+						var e=document.createElement("span");
+						var ve=e.innerHTML=vev[i];
+						
+						co.appendChild(e);
+						e.onmouseover=function(){
+							e.innerHTML="删除"+e.innerHTML;
+						}
+						e.onmouseout=function(){
+							e.innerHTML=ve;
+						}
+					})(i);
+				}
+				sa.value='';
+			}
+		}
+		co.onclick=function(e){
+			console.log(co.children)
+			if(co.children.length){
+				co.removeChild(e.target)
+			}
+		}
+		co.onmouseover=function(e){
+			if(e.target&&e.target.nodeName.toUpperCase() == "SPAN"){
+				e.target.innerHTML = "删除"+e.target.innerHTML;
+			}
+		}
+		co.onmouseout=function(e){
+			if(e.target&&e.target.nodeName.toUpperCase() == "SPAN"){
+				e.target.innerHTML = e.target.innerHTML.replace("删除","");
+			}
+		}
+	}
+</script>
+	</body>
+</html>

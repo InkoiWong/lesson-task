@@ -1,0 +1,160 @@
+/*通用样式*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #dedede;
+    font-family: "微软雅黑";
+}
+/*头部*/
+#header{
+    width: 100%;
+    height: 60px;
+    background: #333;
+}
+div#logo{
+    display: inline-block;
+    vertical-align: top;
+    width: 940px;
+    height: 60px;
+    margin-left:50px;
+}
+div#nav{
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    margin-top: 22px;
+    width: 344px;
+}
+div#nav li{
+    display: inline-block;
+}
+div#nav li a{
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition:color 0.5s linear;
+    -moz-transition:color 0.5s linear;
+    -ms-transition:color 0.5s linear;
+    -o-transition:color 0.5s linear;
+    transition:color 0.5s linear;
+}
+div#nav li:last-child a,div#nav li a:hover{
+    color: #c0c0c0;
+}
+/*主体-大体*/
+div#body article{
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 0 0 20px;
+    width: 800px;
+}
+div#body aside{
+    display: inline-block;
+    vertical-align: top;
+    background: #fff;
+    margin: 20px 0 0 20px;
+    width: 560px;
+}
+div#body section{
+    background: #fff;;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+}
+
+/*主体-artical*/
+section#sec1 p{
+    line-height: 25px;
+}
+
+section#sec2 p{
+    line-height: 25px;
+}
+section#sec2 li{
+    list-style: none;
+}
+
+section#sec3 li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+section#sec3 li img{
+    width: 150px;
+    height: 120px;
+    margin-left: 25px;
+}
+section#sec3 li:last-child{
+    margin-bottom: 0;
+}
+
+section#sec4 div{
+    margin-left: 50px;
+}
+section#sec4 table{
+    width: 100%;
+    border: solid 1px #c0c0c0;
+}
+section#sec4 tr.th{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 28px;
+}
+section#sec4 tr th{
+    width: 40%;
+}
+section#sec4 tr th:last-child{
+    width: 20%;
+}
+section#sec4 tr td{
+    color: #333333;
+    line-height: 24px;
+}
+section#sec4 tr.td_last{
+    background: #c0c0c0;
+}
+
+/*主题-侧栏aside*/
+#form p{
+    margin-left: 180px;
+    position: relative;
+}
+#form p span{
+    position: absolute;
+}
+#form p span.email{
+    left: -8em;
+}
+#form p span.password1{
+    left: -6em;
+}
+#form p span.password2{
+    left: -8em;
+}
+#form p span.sex,#form p span.chengshi,#form p span.aihao{
+    left: -3em;
+}
+#form p span.gerenmiaoshu{
+    left: -5em;
+}
+#form p:last-child{
+    margin-left: 0;
+}
+#form p input.submit{
+    width: 100%;
+}
+
+/*底部*/
+#footer{
+    background: #000;
+    width: 100%;
+    height: 60px;
+}
+#footer footer{
+    text-align: center;
+    padding-top: 15px;
+}
+#footer p{
+    color: #ffffff;
+}

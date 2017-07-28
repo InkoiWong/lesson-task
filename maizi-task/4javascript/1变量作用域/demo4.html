@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var x=1,y=2;
+			function calc(x,y){
+				document.write('a的值为：'+a+'<br/>');
+				document.write('函数体内x的值为：'+x+'<br/>');
+				document.write('函数体内y的值为：'+y+'<br/>');
+//				z=x+y;
+				var x=0,y=6;
+				z=x+y;
+				var a=198;
+				document.write('a的值为：'+a+'<br/>');
+				document.write('x的值为：'+x+'<br/>');
+				return;
+			}
+//			alert(calc(x,y));
+			calc(x,y);
+			document.write('在函数体外x的值为：'+x+'<br/>');
+			document.write('在函数体外z的值为：'+z+'<br/>');
+			
+			var a=1,b=2;
+			function test1(a){
+				var a=5
+				return a;
+			}
+			test1();
+			alert(a);
+		</script>
+	</body>
+</html>

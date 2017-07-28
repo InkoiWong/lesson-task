@@ -1,0 +1,354 @@
+/*通用样式*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 980px;
+    height: 1386px;
+}
+.center{
+    width: 892px;
+    margin: 0 auto;
+}
+img{
+    border: 0;
+}
+.clear{
+    clear: both;
+}
+
+/*头部*/
+#header_wrap header{
+    height: 61px;
+    border-bottom: solid 2px #938e8c;
+}
+div#logo{
+    display: inline-block;vertical-align: top;
+    width: 110px;
+    height: 61px;
+    background-color: #d55d5c;
+    position: relative;
+}
+div#logo p{
+    position: absolute;left:2px;bottom:2px;
+    font-size: 12px;
+    font-family: simhei;
+    color: #fff;
+}
+div#time{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 725px;
+    margin-top: 45px;
+}
+div#time p{
+    font-size: 12px;
+    font-family: simhei;
+    color: #d45d5c;
+}
+
+/*主体*/
+#main_wrap{
+    margin-top: 30px;
+}
+/*主体-tech*/
+section#tech_logo,section#tech_about,section#tech_text{
+    display: inline-block;
+    vertical-align: top;
+}
+    /*主体-tech-logo*/
+section#tech_logo,section#tech_logo img{
+    width: 641px;
+    height: 301px;
+}
+    /*主体-tech-about*/
+section#tech_about{
+    width: 203px;
+    border-top: solid 2px #cc8091;
+    margin-left: 48px;
+    padding-top: 8px;
+    position: relative;
+}
+p.ta_p1{
+    line-height: 24px;
+    text-decoration: underline;
+    font-family: Microsoft YaHei;
+}
+p.ta_p1:first-letter{
+    font-size: 20px;
+}
+p.ta_p2{
+    font-size: 12px;
+    font-family: STHeiti Light;
+    color: #676767;
+}
+p.ta_p3{
+    font-size: 116px;
+    font-family: "Microsoft YaHei";
+    color: #75b86b;
+    /*font-style: oblique;*/
+}
+p.ta_p4,p.ta_p5,p.ta_p6{
+    font-family: "Microsoft YaHei";
+    color: #cc8091;
+}
+p.ta_p4{
+    font-size: 55px;
+    line-height: 55px;
+}
+p.ta_p5{
+    font-size: 21px;
+    position: absolute;
+    bottom: 14px;
+    right: 90px;
+}
+p.ta_p6{
+    font-size: 12px;
+    position: absolute;
+    bottom: 2px;
+    right: 30px;
+}
+
+    /*主体-tech-text*/
+section#tech_text{
+    margin-top: 40px;
+}
+section#tech_text div{
+    display: inline-block;
+    vertical-align: top;
+    width: 220px;
+}
+p.tt_p1,p.tt_p2,p.tt_p3{
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    font-weight: 700;
+    text-decoration: underline;
+}
+p.tt_p1{
+    color: #418c59;
+}
+p.tt_p2{
+    color: #d2994f;
+}
+p.tt_p3{
+    color: #cc7680;
+}
+p.tt_p4{
+    font-size: 12px;
+    color: #767777;
+    font-family: simsun;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+p.tt_p5{
+    font-size: 12px;
+    line-height: 20px;
+    color: #767777;
+    font-family: simsun;
+    letter-spacing: 1px;
+    margin-top: 7px;
+}
+p.tt_p6{
+    font-size: 12px;
+    line-height: 30px;
+    color: #231815;
+    font-family: "Microsoft YaHei";
+    margin-top: 40px;
+    opacity: 0.7;
+}
+p span.tt_p7{
+    font-size: 12px;
+    line-height: 30px;
+    color: #cd4a48;
+    font-family: "Microsoft YaHei";
+    opacity: 0.7;
+}
+
+/*主体-front*/
+#front{
+    margin-top: 30px;
+    width: 892px;
+}
+section#front_text,section#front_other{
+    display: inline-block;
+    vertical-align: top;
+}
+    /*主体-front-text*/
+section#front_text{
+    width: 415px;
+}
+div#ft_tit{
+    border-bottom: solid 2px #11456b;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+p.ft_p1{
+    font-size: 42px;
+    color: #11456b;
+    font-family: simhei;
+    font-weight: bold;
+    line-height: 42px;
+}
+span.ft_p2{
+    font-size: 72px;
+    color: #f5e327;
+    font-style: oblique;
+    font-weight: bold;
+    line-height: 72px;
+}
+span.ft_p3{
+    font-size: 33px;
+    line-height: 33px;
+}
+p.ft_p4{
+    font-size: 70px;
+    color: #f5e327;
+    font-family: "Microsoft YaHei";
+    float: left;
+    width: 77px;
+}
+p.ft_p5{
+    font-size: 12px;
+    line-height: 18px;
+    color: #767777;
+    font-family: simsun;
+    letter-spacing: 1px;
+    text-indent: 2em;
+}
+
+div#ft_content img{
+    float: right;
+    margin-left: 1px;
+    margin-top: 4px;
+}
+
+    /*主体-front-other*/
+section#front_other{
+    width: 458px;
+    margin-left: 19px;
+}
+div#fo_1{
+    width: 458px;
+    height: 275px;
+    position: relative;
+}
+div#fo_1 img{
+    width: 458px;
+    height: 275px;
+}
+div#fo_1_1{
+    display: none;
+    background-color: rgba(0,0,0,0.2);
+    width: 458px;
+    height: 64px;
+    position: absolute;
+    bottom: 0; left: 0;
+}
+div#fo_1:hover div#fo_1_1{
+    display: block;
+}
+p.fo_p1{
+    margin-top: 14px;
+    margin-left: 53px;
+    font-size: 26px;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+}
+span.fo_s1{
+    font-size: 16px;
+    color: #72b16a;
+    font-style: oblique;
+    font-family: "Microsoft YaHei";
+    margin-left: 8px;
+    position: relative;
+    top: 3px;
+}
+div#fo_2{
+    width: 458px;
+    background-color: #eeeed6;
+    margin-top: 25px;
+    padding: 20px 0 0 0;
+}
+div#fo_2_1{
+    margin: 0 20px;
+    text-align: right;
+}
+div#fo_2_1 li{
+    list-style: none;
+    color: #5a5b5b;
+    font-size: 16px;
+    font-family: simsun;
+    line-height: 36px;
+    background: url(images/listicon.jpg) no-repeat center left;
+}
+div#fo_2_2_1,div#fo_2_2_2{
+    display: inline-block;
+    vertical-align: top;
+}
+div#fo_2_2_1{
+    margin-top: 20px;
+    width: 260px;
+    height: 160px;
+    background: #d45d5c;
+    color: #fff;
+}
+div#fo_2_2_1 div{
+    display: inline-block;
+    vertical-align: middle;
+}
+div#fo_2_2_1 div:first-child{
+    margin-left: 5px;
+    line-height: 160px;
+    font-size: 110px;
+    font-family: "Microsoft YaHei";
+}
+div#fo_2_2_1 div:nth-child(2){
+    height: 86px;
+    border-left: solid 2px #ffffff;
+}
+div#fo_2_2_1 p{
+    width: 170px;
+}
+div#fo_2_2_1 p:first-child{
+    font-size: 21px;
+    font-family: simhei;
+    font-style:oblique;
+    color: #fff;
+    line-height: 24px;
+}
+div#fo_2_2_1 p:nth-child(2){
+    font-size: 12px;
+    font-family: simhei;
+    color: #fff;
+    line-height: 12px;
+}
+div#fo_2_2_2{
+    margin-top: 28px;
+    width: 180px;
+}
+div#fo_2_2_2 p{
+    font-size: 14px;
+    color: #5a5b5b;
+    font-family: simhei;
+    font-style: oblique;
+    line-height: 16px;
+}
+div#fo_2_2_2 span{
+    color: #d45d5c;
+    font-size: 20px;
+    font-family: simhei;
+}
+
+/*底部*/
+#footer_wrap footer{
+    margin-top: 30px;
+    height: 61px;
+    border-top: solid 2px #938e8c;
+}
+#footer_wrap p{
+    font-size: 12px;
+    color: #d45d5c;
+    font-family: simhei;
+    text-align: right;
+}

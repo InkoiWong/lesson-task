@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2零基础html及css编码1</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+<div id="header">
+    <header>
+        <div class="container">
+            <div id="logo">
+                <img src="images/logo.jpg" alt=""/>
+            </div>
+            <div id="nav">
+                <nav>
+                    <ul>
+                        <li><a href="">导航链接一</a></li>
+                        <li><a href="">导航链接二</a></li>
+                        <li><a href="">导航链接三</a></li>
+                        <li><a href="">导航链接四</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+</div>
+
+<div id="body">
+    <article id="article">
+        <section id="sec1">
+            <h2>文章一级标题</h2><br/>
+            <h3>文章二级标题</h3><br/>
+            <address>文章作者 文章发布时间</address><br/>
+            <p>这是一个段落<br/>这是一个段落<a href="baidu.com">百度</a>这是一个段落</p><br/>
+            <div><img src="images/1.jpg" alt=""/></div><br/>
+            <p>这是一个段落<br/>这是一个段落<a href="baidu.com">百度</a>这是一个段落</p>
+        </section>
+        <section id="sec2">
+            <h2>第二篇文章一级标题</h2><br/>
+            <h3>文章二级标题</h3><br/>
+            <address>文章作者 文章发布时间</address><br/>
+            <p>这是一个段落<br/>这是一个段落<a href="baidu.com">百度</a>这是一个段落</p><br/>
+            <div><img src="images/1.jpg" alt=""/></div><br/>
+            <div>
+                <ul>
+                    <li>项目列表一</li>
+                    <li>项目列表二</li>
+                    <li>项目列表三</li>
+                </ul>
+            </div>
+        </section>
+        <section id="sec3">
+            <h2>图片</h2><br/>
+            <div>
+                <ul>
+                    <li><figure><figcaption>好看的图片</figcaption><img src="images/1.jpg" alt=""/></figure></li><li>
+                    <figure><figcaption>好看的图片</figcaption><img src="images/1.jpg" alt=""/></figure></li><li>
+                    <figure><figcaption>好看的图片</figcaption><img src="images/1.jpg" alt=""/></figure></li><li>
+                    <figure><figcaption>好看的图片</figcaption><img src="images/1.jpg" alt=""/></figure></li><li>
+                    <figure><figcaption>好看的图片</figcaption><img src="images/1.jpg" alt=""/></figure></li><li>
+                    <figure><figcaption>好看的图片</figcaption><img src="images/1.jpg" alt=""/></figure></li><li>
+                    <figure><figcaption>好看的图片</figcaption><img src="images/1.jpg" alt=""/></figure></li><li>
+                    <figure><figcaption>好看的图片</figcaption><img src="images/1.jpg" alt=""/></figure></li>
+                </ul>
+            </div>
+        </section>
+        <section id="sec4">
+            <h2>最后一篇文章一级标题</h2><br/>
+            <h3>文章二级标题</h3><br/>
+            <address>文章作者 文章发布时间</address><br/>
+            <div>
+                <ol>
+                    <li>排名1</li>
+                    <li>排名2</li>
+                    <li>排名3</li>
+                </ol>
+            </div><br/>
+            <table rules="all">
+                <tr class="th">
+                    <th>表头</th>
+                    <th>表头</th>
+                    <th>表头</th>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="">操作</a></td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="">操作</a></td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="">操作</a></td>
+                </tr>
+                <tr class="td_last">
+                    <td>总计</td>
+                    <td colspan="2">1000</td>
+                </tr>
+            </table>
+        </section>
+    </article><aside>
+    <section id="aside">
+        <h2>侧栏的标题</h2><br/>
+        <form id="form" action="index.html"method="post">
+            <p><span class="email">请输入邮箱地址</span>
+                <input type="email" name="email" placeholder="请输入邮箱地址"/></p><br/>
+            <p class="aside_a">邮箱地址请按要求格式输入</p><br/>
+            <p><span class="password1">请输入密码</span>
+                <input type="password" name="password" placeholder="请输入密码"/><br/><br/>
+                <span class="password2">请再次输入密码</span>
+                <input type="password" name="password" placeholder="请再次输入密码"/><br/><br/></p>
+            <p class="aside_a">密码请为6-16位数字</p><br/>
+            <p><span class="sex">性别</span>
+                <input type="radio" name="sex" checked/>男 <input type="radio" name="sex"/>女<br/><br/></p>
+            <p><span class="chengshi">城市</span>
+                <select class="chengshi" name="chengshi" id="">
+                    <option value="beijing">北京</option>
+                    <option value="shanghai">上海</option>
+                    <option value="guangzhou">广州</option>
+                </select><br/><br/>
+            </p>
+            <p><span class="aihao">爱好</span>
+                <input class="aihao" type="checkbox" name="aihao"/>运动
+                <input type="checkbox" name="aihao"/>艺术
+                <input type="checkbox" name="aihao"/>科学<br/><br/>
+            </p>
+            <p><span class="gerenmiaoshu">个人描述</span>
+                <textarea class="gerenmiaoshu" name="gerenmiaoshu" id="gerenmiaoshu" cols="30" rows="5"></textarea>
+            </p><br/>
+            <p><input class="submit" type="submit" value="确认提交"/></p>
+        </form>
+    </section>
+</aside>
+</div>
+
+<div id="footer">
+    <footer>
+        <p>版权所有©</p>
+    </footer>
+</div>
+</body>
+</html>

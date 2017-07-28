@@ -1,0 +1,9 @@
+方法一、
+浮动：
+html
+先写左div和右div，再写中div，最后加一个div.clear
+css
+左栏定宽、margin，左浮动
+右栏定宽、margin，右浮动
+中栏定margin（margin-left=左栏宽+margin、margin-right=右栏宽+margin）
+给div.clear{clear:both}

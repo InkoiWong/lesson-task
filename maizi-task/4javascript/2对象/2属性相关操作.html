@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var person={
+				username:'king',
+				age:12,
+				salary:1234.56,
+				addr:'背景',
+				sex:'男',
+			};
+//			//查询属性
+//			console.log('用户名为：'+person.username+'\n'+'性别：'+person.sex);
+//			console.log('薪水：'+person['salary']+'\n'+'地址：'+person['age']);
+//			var key='username';
+////			var key=username;
+//			console.log(person.key);
+//			console.log(person[key]);
+//			console.log(person['key']);
+			for(var x in person){
+				console.log(x);
+			}
+		</script>
+	</body>
+</html>

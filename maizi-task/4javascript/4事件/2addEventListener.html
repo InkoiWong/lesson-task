@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<div id="box1" style="background: #ABCDEF;width: 300px;height: 300px;">
+		<input type="button" value="test1" id="btn1" />
+	</div>
+	<script type="text/javascript">
+var btn1=document.getElementById("btn1");
+var box1=document.getElementById("box1");
+btn1.onclick=function(){
+	alert('buntton clicked');
+	//取消冒泡
+	var e=e||window.event;
+	//w3c取消冒泡
+	e.stopPropagation();
+}
+box1.onclick=function(){
+	alert('div clicked');
+}
+document.body.onclick=function(){
+	alert('body licked');
+}
+document.documentElement.onclose=function(){
+	alert('html clicked');
+}
+document.onclick=function(){
+	alert('document clicked');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+	</body>
+</html>

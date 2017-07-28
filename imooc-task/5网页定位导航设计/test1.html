@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>地狗购物网--网页定位导航效果</title>
+	<style>
+	/*通用*/
+		*{margin: 0;padding: 0;}
+		body{font-size: 12px;line-height: 1.7;}
+		img{width:50px;height: 50px;}
+		li{list-style: none;}
+	/*左侧内容*/
+	#content{
+		width: 800px;
+		margin: 0 auto;
+		padding: 20px;
+	}
+	#content h1{
+		color: #08b;
+	}
+	#content .item{
+		padding: 20px;
+		margin-bottom: 20px;
+		border: 1px dotted #0088BB;
+	}
+	#content .item h2{
+		font-size: 16px;
+		font-weight: bold;
+		border-bottom: 2px solid #2;
+		margin-bottom: 10px;
+	}
+	#content .item li{
+		display: inline-block;
+		margin-right: 10px;
+	}
+	#content .item li a img{
+		width: 230px;
+		height: 230px;
+		border: none;
+	}
+	/*右侧导航*/
+	#menu{
+		position: fixed;
+		top: 100px;
+		left: 50%;
+		margin-left: 400px;
+		width: 80px;
+	}
+	#menu ul li a{
+		display: block;
+		margin: 5px 0;
+		font-size: 14px;
+		font-weight: bold;
+		color: #333;
+		width: 80px;
+		height: 50px;
+		line-height: 50px;		
+		text-decoration: none;
+		text-align: center;
+	}
+	#menu ul li a:hover,
+	#menu ul li a.current{
+		color: #fff;
+		background: #0088BB;
+	}
+	</style>
+	
+	<!--<script src="http://libs.baidu.con/jquery/1.10.2/jquery.min.js"></script>-->
+	<script src="jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(window).scroll(function(){//当window发生滚动的时候执行
+				var top = $(document).scrollTop();//获取现在浏览器顶部已经滚动了的距离（就是当前浏览器顶部距离页面顶部的距离）
+				var menu = $("#menu");//获取导航条
+				var items = $("#content").find(".item");//获取所有item元素
+				
+				var currentId = "";//当前所在楼层（item）id
+				
+				items.each(function(){//遍历每个item元素
+					var m = $(this);//把这个元素自身赋给一个值
+					var itemTop = m.offset().top;//.offset()获取元素的相对偏移，返回一个对象
+												//这个对象包含两个属性，top和left 单位是px
+												//top属性是距离浏览器顶部的距离，left同理
+												//这里得到的是item楼层位置
+//					console.log(itemTop);
+					if(top>itemTop-200){//当（当前滚动距离） 大于 （楼层高度 ）的时候
+						currentId = "#" + m.attr("id");//给currentId赋当前楼层的id值
+//					假设top = 2000
+//					itemTop1 = 60
+//					itemTop2 = 869
+//					itemTop3 = 1678
+//					itemTop4 = 2487
+//					itemTop5 = 3296
+//					每一次满足(top>itemTop)都会重新给currentId赋值
+//					最后currentId = "#item3"
+					
+					}else{//当不满足的时候就可以离开遍历了
+						return false;
+					}
+				});
+				//下面要实现一个功能--给当前楼层赋class.current属性
+				//然后给其他的楼层删除class.current属性
+				var currentLink = menu.find(".current");//找到当前具有class.current的楼层的li
+				
+				if(currentId&&currentLink.attr("href")!=currentId){//先判断currentId有值
+																	//然后判断其是否与当前楼层不相同，如果相同就没必要操作了
+					currentLink.removeClass("current");//把当前的class.current去掉
+					menu.find("[href="+currentId+"]").addClass("current");//给所在楼层的li加class.current
+					
+				}
+			});
+		});
+
+
+	</script>
+</head>
+<body>
+<div id="menu">
+	<ul>
+		<li><a href="#item1" class="current">1F 男装</a></li>
+		<li><a href="#item2">2F 女装</a></li>
+		<li><a href="#item3">3F 美妆</a></li>
+		<li><a href="#item4">4F 数码</a></li>
+		<li><a href="#item5">5F 母婴</a></li>
+	</ul>
+</div>
+<div id="content">
+	<h1>地狗购物网</h1>
+	<div id="item1" class="item">
+		<h2>1F 男装</h2>
+		<ul>
+			<li><a href="#"><img src="1F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="1F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="1F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="1F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="1F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="1F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="1F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="1F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="1F.jpg" alt="" /></a></li>
+		</ul>
+	</div>
+	<div id="item2" class="item">
+		<h2>2F 女装</h2>
+		<ul>
+			<li><a href="#"><img src="2F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="2F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="2F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="2F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="2F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="2F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="2F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="2F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="2F.jpg" alt="" /></a></li>
+		</ul>
+	</div>
+	<div id="item3" class="item">
+		<h2>3F 美妆</h2>
+		<ul>
+			<li><a href="#"><img src="3F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="3F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="3F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="3F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="3F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="3F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="3F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="3F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="3F.jpg" alt="" /></a></li>
+		</ul>
+	</div>
+	<div id="item4" class="item">
+		<h2>4F 数码</h2>
+		<ul>
+			<li><a href="#"><img src="4F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="4F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="4F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="4F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="4F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="4F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="4F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="4F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="4F.jpg" alt="" /></a></li>
+		</ul>
+	</div>
+	<div id="item5" class="item">
+		<h2>5F 母婴</h2>
+		<ul>
+			<li><a href="#"><img src="5F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="5F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="5F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="5F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="5F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="5F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="5F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="5F.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="5F.jpg" alt="" /></a></li>
+		</ul>
+	</div>
+
+</div>
+</body>
+</html>

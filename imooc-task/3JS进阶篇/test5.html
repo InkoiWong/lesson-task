@@ -1,0 +1,62 @@
+<!DOCTYPE  HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系好安全带,准备启航</title>
+
+<script type="text/javascript">
+
+  //通过javascript的日期对象来得到当前的日期，并输出。
+  var myDate = new Date();
+  var year = myDate.getFullYear();
+  var month = myDate.getMonth();
+  var date = myDate.getDate();
+  var weekStr = [
+      "星期日",
+      "星期一",
+      "星期二",
+      "星期三",
+      "星期四",
+      "星期五",
+      "星期六",
+      ];
+  var weekday = weekStr[myDate.getDay()];
+  document.write(year+"年"+(month+1)+"月"+date+"日"+" "+weekday+"<br/>");
+
+  
+  //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+  var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+  var scoreArr = scoreStr.split(";");
+  var arr = new Array(scoreArr.length);
+  //创建二维数组
+  for(var i=0; i<arr.length; i++){
+    arr[i] = new Array(2);//第一个为名字，第二个为分数
+    arr[i][0]= scoreArr[i].substring(0, scoreArr[i].indexOf(":"));
+    //indexOf提取出来的是该字符的下标
+    //substring提取出来的是从[start]到[stop-1]位置的字符串//就是含头不含尾
+  	arr[i][1]= parseInt(scoreArr[i].substr(scoreArr[i].indexOf(":")+1));
+  	//substr提取出来的是从[start]到length长度这段位置的字符串
+  	//以indexOf作下标，但是不要从这位置开始提取，需要+1
+  }
+  console.log(scoreArr);
+  console.log(arr[1][0]);
+  console.log(arr[1][1]);
+  
+  
+  //从数组中将成绩撮出来，然后求和取整，并输出。
+  var sum = 0;
+  for(var i in arr){
+  	sum += arr[i][1];
+  }
+  console.log(sum);
+  document.write("班级总分是："+sum+"<br/>");
+  var average = sum/arr.length;
+  console.log(average);
+  document.write("班级平均分是："+average+"<br/>");
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

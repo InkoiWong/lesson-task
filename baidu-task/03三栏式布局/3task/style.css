@@ -1,0 +1,59 @@
+/*通用样式*/
+*{
+    padding: 0;
+    margin: 0;
+}
+img{
+    border: 0;
+}
+
+/*主体*/
+div#container{
+    background: #eee;
+    margin: 20px;
+    padding: 20px;
+    border: solid 1px #999;
+}
+#container section{
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid 1px #999;
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
+}
+
+/*主体-logo*/
+#sec1{
+    width: 200px;
+    float: left;
+}
+#sec1 div{
+    display: inline-block;
+    vertical-align: top;
+}
+#sec1 img{
+    width: 80px;
+    height: 80px;
+}
+
+#sec3{
+    width: 120px;
+    float: right;
+}
+#sec3 li{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+#sec3 li,#sec3 li img{
+    width: 80px;
+    height: 80px;
+}
+
+#sec2{
+    margin: 0 140px 0 220px;
+}
+
+.clear{
+    clear: both;
+}

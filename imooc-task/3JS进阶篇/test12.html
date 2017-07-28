@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+<div>
+  javascript  
+  <p>javascript</p>
+  <div>jQuery</div>
+  <h5>PHP</h5>
+</div>
+<script type="text/javascript">
+ var firstDiv = document.getElementsByTagName("div")[0];
+ var divFirstChild = firstDiv.childNodes[0];
+ document.write(divFirstChild+"<br/>");
+ for(var i=0; i<firstDiv.length; i++){
+    document.write("第"+i+1+"个子节点："+firstDiv.childNodes[i].nodeValue+"<br/>");    
+ }
+ 
+ 
+</script>
+</body>
+</html>

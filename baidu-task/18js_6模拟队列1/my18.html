@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#container div{
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				background-color: red;
+				color: #FFFFFF;
+				line-height: 30px;
+				font-size: 24px;
+				margin: 5px 0;
+				margin-right: 10px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		
+<!--
+任务18描述
+
+如图，模拟一个队列，队列的每个元素是一个数字，初始队列为空
+有一个input输入框，以及4个操作按钮
+点击"左侧入"，将input中输入的数字从左侧插入队列中；
+点击"右侧入"，将input中输入的数字从右侧插入队列中；
+点击"左侧出"，读取并删除队列左侧第一个元素，并弹窗显示元素中数值；
+点击"右侧出"，读取并删除队列又侧第一个元素，并弹窗显示元素中数值；
+点击队列中任何一个元素，则该元素会被从队列中删除-->
+
+<div>
+	<input type="text" id="num-input" placeholder="请输入数字"/>
+	<!--<input type="button" id="left-in" value="左侧入"/>
+	<input type="button" id="right-in" value="右侧入"/>
+	<input type="button" id="left-out" value="左侧出"/>
+	<input type="button" id="right-out" value="右侧出"/>-->
+	<button id="left-in">左侧入</button>
+	<button id="right-in">右侧入</button>
+	<button id="left-out">左侧出</button>
+	<button id="right-out">右侧出</button>
+</div>
+
+<div id="container">
+	
+</div>
+
+<script src="my18.js"></script>
+	</body>
+</html>
